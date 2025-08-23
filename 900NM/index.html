@@ -1,9 +1,14 @@
+
+
 <!DOCTYPE html>
 <html manifest="Cache.manifest" dir="ltr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raad Host | Manual Exploit (Compressed) + New Webkit for PS4 FW 9.00</title>
+
+    <link rel="stylesheet" href="style.css">
+
     <style>
         :root {
             --primary-color: #00BFFF;
@@ -31,16 +36,16 @@
             position: relative;
         }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(26, 25, 32, 0.85);
-            z-index: -1;
-        }
+            body::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(26, 25, 32, 0.85);
+                z-index: -1;
+            }
 
         .container {
             max-width: 1200px;
@@ -59,12 +64,12 @@
             animation: pulse 2s infinite;
         }
 
-        .header h1 {
-            font-size: 2.2rem;
-            color: var(--secondary-color);
-            text-shadow: 2px 2px 8px #000;
-            margin-bottom: 10px;
-        }
+            .header h1 {
+                font-size: 2.2rem;
+                color: var(--secondary-color);
+                text-shadow: 2px 2px 8px #000;
+                margin-bottom: 10px;
+            }
 
         .status-bar {
             text-align: center;
@@ -109,10 +114,10 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px var(--secondary-color);
-        }
+            .section:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 20px var(--secondary-color);
+            }
 
         .section-title {
             color: var(--secondary-color);
@@ -147,31 +152,94 @@
             justify-content: center;
         }
 
-        .button-payload:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px var(--secondary-color);
+            .button-payload:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px var(--secondary-color);
+            }
+
+            .button-payload i {
+                margin-right: 8px;
+            }
+
+        .group-btn {
+            background-color: #222;
+            color: var(--secondary-color);
         }
 
-        .button-payload i {
-            margin-right: 8px;
+        .mods-btn {
+            background-color: #0B0B61;
+            color: white;
         }
 
-        .group-btn { background-color: #222; color: var(--secondary-color); }
-        .mods-btn { background-color: #0B0B61; color: white; }
-        .fan-btn { background-color: #004466; color: var(--accent-color); }
-        .gtav-btn { background-color: #1a1a1a; color: white; }
-        .rdr2-btn { background-color: #330000; color: #FF4444; }
-        .linux-btn { background-color: #003300; color: #00FF99; }
-        .tools-btn { background-color: #222244; color: var(--secondary-color); }
-        .dumpers-btn { background-color: #440000; color: #FF9999; }
-        .special-btn { background-color: #0B0B61; color: white; }
-        .goldhen { background-color: #1a1a1a; color: #CEC52A; }
-        .loader { background-color: #0F0F53; color: white; }
-        .toolbox { background-color: #8B0000; color: white; }
-        .webrte { background-color: #00008B; color: white; }
-        .debug { background-color: #006400; color: white; }
-        .activator { background-color: #76411D; color: white; }
-        .default-btn { background-color: rgba(0,0,0,0.6); color: white; }
+        .fan-btn {
+            background-color: #004466;
+            color: var(--accent-color);
+        }
+
+        .gtav-btn {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .rdr2-btn {
+            background-color: #330000;
+            color: #FF4444;
+        }
+
+        .linux-btn {
+            background-color: #003300;
+            color: #00FF99;
+        }
+
+        .tools-btn {
+            background-color: #222244;
+            color: var(--secondary-color);
+        }
+
+        .dumpers-btn {
+            background-color: #440000;
+            color: #FF9999;
+        }
+
+        .special-btn {
+            background-color: #0B0B61;
+            color: white;
+        }
+
+        .goldhen {
+            background-color: #1a1a1a;
+            color: #CEC52A;
+        }
+
+        .loader {
+            background-color: #0F0F53;
+            color: white;
+        }
+
+        .toolbox {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        .webrte {
+            background-color: #00008B;
+            color: white;
+        }
+
+        .debug {
+            background-color: #006400;
+            color: white;
+        }
+
+        .activator {
+            background-color: #76411D;
+            color: white;
+        }
+
+        .default-btn {
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+        }
 
         .footer {
             margin-top: 40px;
@@ -192,10 +260,10 @@
             text-align: center;
         }
 
-        .credits p {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
+            .credits p {
+                margin-bottom: 10px;
+                line-height: 1.6;
+            }
 
         .tips {
             direction: rtl;
@@ -206,54 +274,54 @@
             margin-top: 20px;
         }
 
-        .tips h3 {
-            color: #00FF99;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+            .tips h3 {
+                color: #00FF99;
+                margin-bottom: 15px;
+                text-align: center;
+            }
 
-        .tips ul {
-            list-style: none;
-            padding: 0;
-        }
+            .tips ul {
+                list-style: none;
+                padding: 0;
+            }
 
-        .tips li {
-            margin-bottom: 10px;
-            padding-right: 20px;
-            position: relative;
-        }
+            .tips li {
+                margin-bottom: 10px;
+                padding-right: 20px;
+                position: relative;
+            }
 
-        .tips li:before {
-            content: "✅";
-            position: absolute;
-            right: 0;
-        }
+                .tips li:before {
+                    content: "✅";
+                    position: absolute;
+                    right: 0;
+                }
 
         .logo-section {
             margin-top: 30px;
             text-align: center;
         }
 
-        .logo-section p {
-            font-size: 1.3rem;
-            color: var(--secondary-color);
-            text-shadow: 0 0 5px var(--primary-color);
-            margin-bottom: 15px;
-        }
+            .logo-section p {
+                font-size: 1.3rem;
+                color: var(--secondary-color);
+                text-shadow: 0 0 5px var(--primary-color);
+                margin-bottom: 15px;
+            }
 
         .logo {
             display: inline-block;
             transition: transform 0.5s;
         }
 
-        .logo:hover {
-            transform: scale(1.2);
-        }
+            .logo:hover {
+                transform: scale(1.2);
+            }
 
-        .logo img {
-            width: 120px;
-            height: auto;
-        }
+            .logo img {
+                width: 120px;
+                height: auto;
+            }
 
         .modal {
             display: none;
@@ -287,9 +355,9 @@
             cursor: pointer;
         }
 
-        .close:hover {
-            color: var(--text-color);
-        }
+            .close:hover {
+                color: var(--text-color);
+            }
 
         .tab-container {
             margin-top: 20px;
@@ -313,19 +381,19 @@
             transition: all 0.3s;
         }
 
-        .tab-btn.active {
-            background: var(--primary-color);
-            color: #000;
-        }
+            .tab-btn.active {
+                background: var(--primary-color);
+                color: #000;
+            }
 
         .tab-content {
             display: none;
         }
 
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
+            .tab-content.active {
+                display: block;
+                animation: fadeIn 0.5s;
+            }
 
         .back-btn {
             display: block;
@@ -340,24 +408,44 @@
             transition: all 0.3s;
         }
 
-        .back-btn:hover {
-            background: var(--secondary-color);
-        }
+            .back-btn:hover {
+                background: var(--secondary-color);
+            }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 15px var(--primary-color); }
-            50% { box-shadow: 0 0 25px var(--secondary-color); }
-            100% { box-shadow: 0 0 15px var(--primary-color); }
+            0% {
+                box-shadow: 0 0 15px var(--primary-color);
+            }
+
+            50% {
+                box-shadow: 0 0 25px var(--secondary-color);
+            }
+
+            100% {
+                box-shadow: 0 0 15px var(--primary-color);
+            }
         }
 
         @keyframes modalopen {
-            from {opacity: 0; transform: translateY(-50px);}
-            to {opacity: 1; transform: translateY(0);}
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         .hue {
@@ -370,8 +458,13 @@
         }
 
         @keyframes hue {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
         }
 
         select {
@@ -383,6 +476,7 @@
             margin-left: 10px;
         }
     </style>
+    >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
 </head>
 <body>
     <div class="container">
@@ -398,292 +492,354 @@
             <div class="section">
                 <h3 class="section-title">GoldHen</h3>
                 <div class="button-grid">
-                    <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.1.2 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen212()">
+                    <<<<<<< HEAD
+                    <button class="button-payload goldhen" onmouseover="updateStatus('GoldHen v2.1.2 by SISTR0 for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="goldhen212()">
                         <i>🟡</i> GoldHen V2.1.2
                     </button>
-                    <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.2.4 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen224()">
+                    <button class="button-payload goldhen" onmouseover="updateStatus('GoldHen v2.2.4 by SISTR0 for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="goldhen224()">
                         <i>🟡</i> GoldHen V2.2.4
                     </button>
-                    <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen23()">
+                    <button class="button-payload goldhen" onmouseover="updateStatus('GoldHen v2.3 by SISTR0 for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="goldhen23()">
                         <i>🟡</i> GoldHen V2.3
                     </button>
-                    <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.4 Beta 17 3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen24()">
-                        <i>🟡</i> GoldHen V2.4b173
-                    </button>
+                    <button class="button-payload goldhen" onmouseover="updateStatus('GoldHen v2.4 Beta 17 3 by SISTR0 for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="goldhen24()">
+                        =======
+                        <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.1.2 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen212()">
+                            <i>🟡</i> GoldHen V2.1.2
+                        </button>
+                        <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.2.4 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen224()">
+                            <i>🟡</i> GoldHen V2.2.4
+                        </button>
+                        <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen23()">
+                            <i>🟡</i> GoldHen V2.3
+                        </button>
+                        <button class="button-payload goldhen" onmouseover="progress.innerHTML='GoldHen v2.4 Beta 17 3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="goldhen24()">
+                            >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                            <i>🟡</i> GoldHen V2.4b173
+                        </button>
                 </div>
             </div>
 
             <div class="section">
                 <h3 class="section-title">Loaders</h3>
                 <div class="button-grid">
-                    <button class="button-payload loader" onmouseover="progress.innerHTML='Binloader Port 9020 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="Bloader()">
+                    <<<<<<< HEAD
+                    <button class="button-payload loader" onmouseover="updateStatus('Binloader Port 9020 for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="Bloader()">
                         <i>📡</i> BinLoader
                     </button>
-                    <button class="button-payload loader" onmouseover="progress.innerHTML='Mira loader Port 9021 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="Mloader()">
+                    <button class="button-payload loader" onmouseover="updateStatus('Mira loader Port 9021 for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="Mloader()">
                         <i>🧩</i> MiraLoader
                     </button>
-                    <button class="button-payload loader" onmouseover="progress.innerHTML='Mira Orbis for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="Mira()">
+                    <button class="button-payload loader" onmouseover="updateStatus('Mira Orbis for PS4 9.00 Fw')" onmouseout="resetStatus()" onclick="Mira()">
                         <i>🧩</i> Mira
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Copy json and shn files from USB to PS4'" onmouseout="progress.innerHTML='Status'" onclick="load_copych()">
-                        <i>📁</i> Cheat Copy
-                    </button>
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Copy json and shn files from USB to PS4')" onmouseout="resetStatus()" onclick="load_copych()">
+                        =======
+                        <button class="button-payload loader" onmouseover="progress.innerHTML='Binloader Port 9020 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="Bloader()">
+                            <i>📡</i> BinLoader
+                        </button>
+                        <button class="button-payload loader" onmouseover="progress.innerHTML='Mira loader Port 9021 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="Mloader()">
+                            <i>🧩</i> MiraLoader
+                        </button>
+                        <button class="button-payload loader" onmouseover="progress.innerHTML='Mira Orbis for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" onclick="Mira()">
+                            <i>🧩</i> Mira
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Copy json and shn files from USB to PS4'" onmouseout="progress.innerHTML='Status'" onclick="load_copych()">
+                            >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                            <i>📁</i> Cheat Copy
+                        </button>
                 </div>
             </div>
 
             <div class="section">
                 <h3 class="section-title">Tools</h3>
                 <div class="button-grid">
-                    <button class="button-payload webrte" onmouseover="progress.innerHTML='WebRTE for PS4 9.00 fw'" onmouseout="progress.innerHTML='Status'" onclick="load_WebRTE()">
+                    <<<<<<< HEAD
+                    <button class="button-payload webrte" onmouseover="updateStatus('WebRTE for PS4 9.00 fw')" onmouseout="resetStatus()" onclick="load_WebRTE()">
                         <i>🌐</i> WebRTE
                     </button>
-                    <button class="button-payload debug" onmouseover="progress.innerHTML='ps4debug for PS4 9.00 fw'" onmouseout="progress.innerHTML='Status'" onclick="load_PS4Debug()">
+                    <button class="button-payload debug" onmouseover="updateStatus('ps4debug for PS4 9.00 fw')" onmouseout="resetStatus()" onclick="load_PS4Debug()">
                         <i>🛠️</i> Ps4debug
                     </button>
-                    <button class="button-payload toolbox" onmouseover="progress.innerHTML='Orbis Toolbox Loader Alfa 1190 for PS4 9.00 fw'" onmouseout="progress.innerHTML='Status'" onclick="load_Orbis()">
+                    <button class="button-payload toolbox" onmouseover="updateStatus('Orbis Toolbox Loader Alfa 1190 for PS4 9.00 fw')" onmouseout="resetStatus()" onclick="load_Orbis()">
                         <i>🧰</i> Orbis Toolbox
                     </button>
                     <a href="web.html" style="text-decoration: none;">
-                        <button class="button-payload activator" onmouseover="progress.innerHTML='Web Activator by Sleirsgoevy'" onmouseout="progress.innerHTML='Status'">
-                            <i>🌍</i> Web Activator
-                        </button>
-                    </a>
+                        <button class="button-payload activator" onmouseover="updateStatus('Web Activator by Sleirsgoevy')" onmouseout="resetStatus()">
+                            =======
+                            <button class="button-payload webrte" onmouseover="progress.innerHTML='WebRTE for PS4 9.00 fw'" onmouseout="progress.innerHTML='Status'" onclick="load_WebRTE()">
+                                <i>🌐</i> WebRTE
+                            </button>
+                            <button class="button-payload debug" onmouseover="progress.innerHTML='ps4debug for PS4 9.00 fw'" onmouseout="progress.innerHTML='Status'" onclick="load_PS4Debug()">
+                                <i>🛠️</i> Ps4debug
+                            </button>
+                            <button class="button-payload toolbox" onmouseover="progress.innerHTML='Orbis Toolbox Loader Alfa 1190 for PS4 9.00 fw'" onmouseout="progress.innerHTML='Status'" onclick="load_Orbis()">
+                                <i>🧰</i> Orbis Toolbox
+                            </button>
+                            <a href="web.html" style="text-decoration: none;">
+                                <button class="button-payload activator" onmouseover="progress.innerHTML='Web Activator by Sleirsgoevy'" onmouseout="progress.innerHTML='Status'">
+                                    >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                                    <i>🌍</i> Web Activator
+                                </button>
+                            </a>
                 </div>
             </div>
 
             <div class="section">
                 <h3 class="section-title">Utilities</h3>
                 <div class="button-grid">
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='A full access FTP server for the PS4'" onmouseout="progress.innerHTML='Status'" onclick="load_FTP()">
+                    <<<<<<< HEAD
+                    <button class="button-payload default-btn" onmouseover="updateStatus('A full access FTP server for the PS4')" onmouseout="resetStatus()" onclick="load_FTP()">
                         <i>📂</i> FTP
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Move installed games to an external USB drive'" onmouseout="progress.innerHTML='Status'" onclick="load_App2USB()">
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Move installed games to an external USB drive')" onmouseout="resetStatus()" onclick="load_App2USB()">
                         <i>📦</i> App2USB
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Unlocks debug features on testkit'" onmouseout="progress.innerHTML='Status'" onclick="load_ToDexE()">
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Unlocks debug features on testkit')" onmouseout="resetStatus()" onclick="load_ToDexE()">
                         <i>🔓</i> ToDex Enable
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Disable ToDEX'" onmouseout="progress.innerHTML='Status'" onclick="load_ToDexD()">
-                        <i>🔒</i> ToDex Disable
-                    </button>
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Disable ToDEX')" onmouseout="resetStatus()" onclick="load_ToDexD()">
+                        =======
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='A full access FTP server for the PS4'" onmouseout="progress.innerHTML='Status'" onclick="load_FTP()">
+                            <i>📂</i> FTP
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Move installed games to an external USB drive'" onmouseout="progress.innerHTML='Status'" onclick="load_App2USB()">
+                            <i>📦</i> App2USB
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Unlocks debug features on testkit'" onmouseout="progress.innerHTML='Status'" onclick="load_ToDexE()">
+                            <i>🔓</i> ToDex Enable
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Disable ToDEX'" onmouseout="progress.innerHTML='Status'" onclick="load_ToDexD()">
+                            >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                            <i>🔒</i> ToDex Disable
+                        </button>
                 </div>
             </div>
 
             <div class="section">
                 <h3 class="section-title">System</h3>
                 <div class="button-grid">
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Creates dummy files in the PS4 update folder'" onmouseout="progress.innerHTML='Status'" onclick="load_DisableUpdates()">
+                    <<<<<<< HEAD
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Creates dummy files in the PS4 update folder')" onmouseout="resetStatus()" onclick="load_DisableUpdates()">
                         <i>🚫</i> Disable Updates
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Removes dummy files in the PS4 update folder'" onmouseout="progress.innerHTML='Status'" onclick="load_EnableUpdates()">
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Removes dummy files in the PS4 update folder')" onmouseout="resetStatus()" onclick="load_EnableUpdates()">
                         <i>✅</i> Enable Update
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Blocks auto-opening of last page in browser'" onmouseout="progress.innerHTML='Status'" onclick="load_HistoryBlocker()">
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Blocks auto-opening of last page in browser')" onmouseout="resetStatus()" onclick="load_HistoryBlocker()">
                         <i>🧹</i> History Blocker
                     </button>
-                    <button class="button-payload default-btn" onmouseover="progress.innerHTML='Enable Browser'" onmouseout="progress.innerHTML='Status'" onclick="load_EnableBrowser()">
-                        <i>🌐</i> Enable Browser
-                    </button>
+                    <button class="button-payload default-btn" onmouseover="updateStatus('Enable Browser')" onmouseout="resetStatus()" onclick="load_EnableBrowser()">
+                        =======
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Creates dummy files in the PS4 update folder'" onmouseout="progress.innerHTML='Status'" onclick="load_DisableUpdates()">
+                            <i>🚫</i> Disable Updates
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Removes dummy files in the PS4 update folder'" onmouseout="progress.innerHTML='Status'" onclick="load_EnableUpdates()">
+                            <i>✅</i> Enable Update
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Blocks auto-opening of last page in browser'" onmouseout="progress.innerHTML='Status'" onclick="load_HistoryBlocker()">
+                            <i>🧹</i> History Blocker
+                        </button>
+                        <button class="button-payload default-btn" onmouseover="progress.innerHTML='Enable Browser'" onmouseout="progress.innerHTML='Status'" onclick="load_EnableBrowser()">
+                            >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                            <i>🌐</i> Enable Browser
+                        </button>
                 </div>
             </div>
 
             <div class="section">
                 <h3 class="section-title">Groups</h3>
                 <div class="button-grid">
-                    <button class="button-payload group-btn" onmouseover="progress.innerHTML='All Dumper payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('dumper-tab')">
+                    <<<<<<< HEAD
+                    <button class="button-payload group-btn" onmouseover="updateStatus('All Dumper payloads')" onmouseout="resetStatus()" onclick="openTab('dumper-tab')">
                         <i>📦</i> Dumper Group
                     </button>
-                    <button class="button-payload group-btn" onmouseover="progress.innerHTML='All Linux payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('linux-tab')">
+                    <button class="button-payload group-btn" onmouseover="updateStatus('All Linux payloads')" onmouseout="resetStatus()" onclick="openTab('linux-tab')">
                         <i>🐧</i> Linux Group
                     </button>
-                    <button class="button-payload group-btn" onmouseover="progress.innerHTML='All Tools payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('tools-tab')">
+                    <button class="button-payload group-btn" onmouseover="updateStatus('All Tools payloads')" onmouseout="resetStatus()" onclick="openTab('tools-tab')">
                         <i>🛠️</i> Tools Group
                     </button>
-                    <button class="button-payload mods-btn" onmouseover="progress.innerHTML='All Mods Gtav & RDR2 payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('mods-tab')">
+                    <button class="button-payload mods-btn" onmouseover="updateStatus('All Mods Gtav & RDR2 payloads')" onmouseout="resetStatus()" onclick="openTab('mods-tab')">
                         <i>🎮</i> GTAV & RDR2 Mods
                     </button>
-                    <div style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
-                        <button class="button-payload fan-btn" onmouseover="progress.innerHTML='Set the desired temperature that the PS4 fan starts'" onmouseout="progress.innerHTML='Status'" onclick="load_fan()">
+                    <div class="fan-control">
+                        <button class="button-payload fan-btn" onmouseover="updateStatus('Set the desired temperature that the PS4 fan starts')" onmouseout="resetStatus()" onclick="load_fan()">
                             <i>🌬️</i> Fan Control
                         </button>
-                        <select style="font-size:16px; margin-left:10px;" id="tempC"></select>
-                        <span style="font-size:16px; color:white; margin-left:5px;">°C</span>
+                        <select id="tempC"></select>
+                        <span>°C</span>
+                        =======
+                        <button class="button-payload group-btn" onmouseover="progress.innerHTML='All Dumper payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('dumper-tab')">
+                            <i>📦</i> Dumper Group
+                        </button>
+                        <button class="button-payload group-btn" onmouseover="progress.innerHTML='All Linux payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('linux-tab')">
+                            <i>🐧</i> Linux Group
+                        </button>
+                        <button class="button-payload group-btn" onmouseover="progress.innerHTML='All Tools payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('tools-tab')">
+                            <i>🛠️</i> Tools Group
+                        </button>
+                        <button class="button-payload mods-btn" onmouseover="progress.innerHTML='All Mods Gtav & RDR2 payloads'" onmouseout="progress.innerHTML='Status'" onclick="openTab('mods-tab')">
+                            <i>🎮</i> GTAV & RDR2 Mods
+                        </button>
+                        <div style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+                            <button class="button-payload fan-btn" onmouseover="progress.innerHTML='Set the desired temperature that the PS4 fan starts'" onmouseout="progress.innerHTML='Status'" onclick="load_fan()">
+                                <i>🌬️</i> Fan Control
+                            </button>
+                            <select style="font-size:16px; margin-left:10px;" id="tempC"></select>
+                            <span style="font-size:16px; color:white; margin-left:5px;">°C</span>
+                            >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="credits">
+                        <p><strong>Compiled by:</strong> <span class="hue">Karo Sharifi</span></p>
+                        <p><strong>Updated & Developed by:</strong> <span class="hue">Khaled Elabani - Benghazi, Libya</span></p>
+                        <p><strong>Whatsapp : </strong> <span class="hue">+218-92-556-8088</span></p>
+                        <p><strong>Super Special Thanks To : </strong> <span class="hue">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Abc ,Znullptr ,hippie68 ...</span></p>
+                    </div>
+
+                    <div class="tips">
+                        <h3>نصائح للمستخدمين الجدد</h3>
+                        <ul>
+                            <li>التحقق من تحذيث النظام هو 9.00</li>
+                            <li>الدخول الى المتصفح www</li>
+                            <li>امسح ملفات الارتباط والسجل من الاعدادات المتصفح عن طريق الزر الخيار</li>
+                        </ul>
+                    </div>
+
+                    <div class="logo-section">
+                        <p>🎮 لعشاق ألعاب البلايستيشن وتهكير GoldHen – استمتع بتجربة احترافية ومخصصة</p>
+                        <a href="https://raad.com.ly/" target="_blank" class="logo">
+                            <img src="/images/logo.png" alt="Raad Host Logo">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer">
-            <div class="footer-content">
-                <div class="credits">
-                    <p><strong>Compiled by:</strong> <span class="hue">Karo Sharifi</span></p>
-                    <p><strong>Updated & Developed by:</strong> <span class="hue">Khaled Elabani - Benghazi, Libya</span></p>
-                    <p><strong>Whatsapp : </strong> <span class="hue">+218-92-556-8088</span></p>
-                    <p><strong>Super Special Thanks To : </strong> <span class="hue">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Abc ,Znullptr ,hippie68 ...</span></p>
-                </div>
+        <!-- Modal for Groups -->
+        <div id="groupModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <<<<<<< HEAD
 
-                <div class="tips">
-                    <h3>نصائح للمستخدمين الجدد</h3>
-                    <ul>
-                        <li>التحقق من تحذيث النظام هو 9.00</li>
-                        <li>الدخول الى المتصفح www</li>
-                        <li>امسح ملفات الارتباط والسجل من الاعدادات المتصفح عن طريق الزر الخيار</li>
-                    </ul>
-                </div>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="switchTab('dumper-tab')">Dumpers</button>
+                        <button class="tab-btn" onclick="switchTab('linux-tab')">Linux</button>
+                        <button class="tab-btn" onclick="switchTab('tools-tab')">Tools</button>
+                        <button class="tab-btn" onclick="switchTab('mods-tab')">Mods</button>
+                        =======
 
-                <div class="logo-section">
-                    <p>🎮 لعشاق ألعاب البلايستيشن وتهكير GoldHen – استمتع بتجربة احترافية ومخصصة</p>
-                    <a href="https://raad.com.ly/" target="_blank" class="logo">
-                        <img src="/images/logo.png" alt="Raad Host Logo">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <div class="tab-container">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" onclick="openTab('dumper-tab')">Dumpers</button>
+                                <button class="tab-btn" onclick="openTab('linux-tab')">Linux</button>
+                                <button class="tab-btn" onclick="openTab('tools-tab')">Tools</button>
+                                <button class="tab-btn" onclick="openTab('mods-tab')">Mods</button>
+                                >>>>>>> a45e1803eea7b8573f34ef08aee0deb1fced4c9f
+                            </div>
 
-    <!-- Modal for Groups -->
-    <div id="groupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            
-            <div class="tab-container">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" onclick="openTab('dumper-tab')">Dumpers</button>
-                    <button class="tab-btn" onclick="openTab('linux-tab')">Linux</button>
-                    <button class="tab-btn" onclick="openTab('tools-tab')">Tools</button>
-                    <button class="tab-btn" onclick="openTab('mods-tab')">Mods</button>
-                </div>
+                            <div id="dumper-tab" class="tab-content active">
+                                <h3 class="section-title">Dumper Group</h3>
+                                <div class="button-grid">
+                                    <button class="button-payload dumpers-btn" onclick="load_pkgb()">📦 PKG Backup</button>
+                                    <button class="button-payload dumpers-btn" onclick="load_DumperG()">🎮 Dumper Game</button>
+                                    <button class="button-payload dumpers-btn" onclick="load_DumperU()">🧩 Dumper Update</button>
+                                    <button class="button-payload dumpers-btn" onclick="load_DumperMGU()">🔄 Dumper MGU</button>
+                                    <button class="button-payload dumpers-btn" onclick="load_DumperSGU()">🔀 Dumper SGU</button>
+                                    <button class="button-payload dumpers-btn" onclick="load_KernelDumper()">🧠 Kernel Dumper</button>
+                                    <button class="button-payload dumpers-btn" onclick="load_ModuleDumper()">📚 Module Dumper</button>
+                                </div>
+                            </div>
 
-                <div id="dumper-tab" class="tab-content active">
-                    <h3 class="section-title">Dumper Group</h3>
-                    <div class="button-grid">
-                        <button class="button-payload dumpers-btn" onclick="load_pkgb()">📦 PKG Backup</button>
-                        <button class="button-payload dumpers-btn" onclick="load_DumperG()">🎮 Dumper Game</button>
-                        <button class="button-payload dumpers-btn" onclick="load_DumperU()">🧩 Dumper Update</button>
-                        <button class="button-payload dumpers-btn" onclick="load_DumperMGU()">🔄 Dumper MGU</button>
-                        <button class="button-payload dumpers-btn" onclick="load_DumperSGU()">🔀 Dumper SGU</button>
-                        <button class="button-payload dumpers-btn" onclick="load_KernelDumper()">🧠 Kernel Dumper</button>
-                        <button class="button-payload dumpers-btn" onclick="load_ModuleDumper()">📚 Module Dumper</button>
+                            <div id="linux-tab" class="tab-content">
+                                <h3 class="section-title">Linux Group</h3>
+                                <div class="button-grid">
+                                    <button class="button-payload linux-btn" onclick="Linux1N()">Linux PSXITA 1GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux2N()">Linux PSXITA 2GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux3N()">Linux PSXITA 3GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux4N()">Linux PSXITA 4GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux5N()">Linux PSXITA 5GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux1()">Linux 1GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux2()">Linux 2GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux3()">Linux 3GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux4()">Linux 4GB</button>
+                                    <button class="button-payload linux-btn" onclick="Linux5()">Linux 5GB</button>
+                                    <button class="button-payload special-btn" onclick="Linux6()">🔍 Whos_That_Southbridge</button>
+                                </div>
+                            </div>
+
+                            <div id="tools-tab" class="tab-content">
+                                <h3 class="section-title">Tools Group</h3>
+                                <div class="button-grid">
+                                    <button class="button-payload tools-btn" onclick="load_BackupDB()">💾 DB Backup</button>
+                                    <button class="button-payload tools-btn" onclick="load_RestoreDB()">📂 DB Restore</button>
+                                    <button class="button-payload tools-btn" onclick="load_ExitIDU()">🚫 Exit IDU</button>
+                                    <button class="button-payload tools-btn" onclick="load_RIFRenamer()">✏️ Rif Renamer</button>
+                                    <button class="button-payload tools-btn" onclick="load_permanentuart()">🔧 Permanent UART</button>
+                                    <button class="button-payload tools-btn" onclick="load_DisableASLR()">🛑 Disable ASLR</button>
+                                </div>
+                            </div>
+
+                            <div id="mods-tab" class="tab-content">
+                                <h3 class="section-title">GTAV & RDR2 Mods</h3>
+                                <div class="button-grid">
+                                    <button class="button-payload gtav-btn" onclick="load_GTAAr0()">GTAV A100</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTAAr1()">GTAV A127</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTAAr2()">GTAV A132</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTAAr3()">GTAV A133</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTABQ()">GTAV BQ</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTABQ2()">GTAV BQ2</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTABQ3()">GTAV BQ3</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTAVMB()">GTAV MB127</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTAVLTS()">GTAV LTS127</button>
+                                    <button class="button-payload gtav-btn" onclick="load_expul()">GTAV Ex135</button>
+                                    <button class="button-payload gtav-btn" onclick="load_expul2()">GTAV Ex138</button>
+                                    <button class="button-payload gtav-btn" onclick="load_Wilde32()">GTAV W132</button>
+                                    <button class="button-payload gtav-btn" onclick="load_Wilde33()">GTAV W133</button>
+                                    <button class="button-payload gtav-btn" onclick="load_Wilde38()">GTAV W138</button>
+                                    <button class="button-payload gtav-btn" onclick="load_GTAL()">GTAV Lamance</button>
+                                    <button class="button-payload rdr2-btn" onclick="load_Oysters100()">RDR2 V1.00</button>
+                                    <button class="button-payload rdr2-btn" onclick="load_Oysters113()">RDR2 V1.13</button>
+                                    <button class="button-payload rdr2-btn" onclick="load_Oysters119()">RDR2 V1.19</button>
+                                    <button class="button-payload rdr2-btn" onclick="load_Oysters124()">RDR2 V1.24</button>
+                                    <button class="button-payload rdr2-btn" onclick="load_Oysters129()">RDR2 V1.29</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="back-btn" onclick="closeModal()">Back to Main Menu</button>
                     </div>
                 </div>
 
-                <div id="linux-tab" class="tab-content">
-                    <h3 class="section-title">Linux Group</h3>
-                    <div class="button-grid">
-                        <button class="button-payload linux-btn" onclick="Linux1N()">Linux PSXITA 1GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux2N()">Linux PSXITA 2GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux3N()">Linux PSXITA 3GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux4N()">Linux PSXITA 4GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux5N()">Linux PSXITA 5GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux1()">Linux 1GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux2()">Linux 2GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux3()">Linux 3GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux4()">Linux 4GB</button>
-                        <button class="button-payload linux-btn" onclick="Linux5()">Linux 5GB</button>
-                        <button class="button-payload special-btn" onclick="Linux6()">🔍 Whos_That_Southbridge</button>
-                    </div>
-                </div>
 
-                <div id="tools-tab" class="tab-content">
-                    <h3 class="section-title">Tools Group</h3>
-                    <div class="button-grid">
-                        <button class="button-payload tools-btn" onclick="load_BackupDB()">💾 DB Backup</button>
-                        <button class="button-payload tools-btn" onclick="load_RestoreDB()">📂 DB Restore</button>
-                        <button class="button-payload tools-btn" onclick="load_ExitIDU()">🚫 Exit IDU</button>
-                        <button class="button-payload tools-btn" onclick="load_RIFRenamer()">✏️ Rif Renamer</button>
-                        <button class="button-payload tools-btn" onclick="load_permanentuart()">🔧 Permanent UART</button>
-                        <button class="button-payload tools-btn" onclick="load_DisableASLR()">🛑 Disable ASLR</button>
-                    </div>
-                </div>
+                <script src="int64.js"></script>
+                <script src="rop.js"></script>
+                <script src="kexploit.js"></script>
+                <script src="exploit.js"></script>
+                <script src="bzip2.js"></script>
+                <script src="main.js"></script>
 
-                <div id="mods-tab" class="tab-content">
-                    <h3 class="section-title">GTAV & RDR2 Mods</h3>
-                    <div class="button-grid">
-                        <button class="button-payload gtav-btn" onclick="load_GTAAr0()">GTAV A100</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTAAr1()">GTAV A127</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTAAr2()">GTAV A132</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTAAr3()">GTAV A133</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTABQ()">GTAV BQ</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTABQ2()">GTAV BQ2</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTABQ3()">GTAV BQ3</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTAVMB()">GTAV MB127</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTAVLTS()">GTAV LTS127</button>
-                        <button class="button-payload gtav-btn" onclick="load_expul()">GTAV Ex135</button>
-                        <button class="button-payload gtav-btn" onclick="load_expul2()">GTAV Ex138</button>
-                        <button class="button-payload gtav-btn" onclick="load_Wilde32()">GTAV W132</button>
-                        <button class="button-payload gtav-btn" onclick="load_Wilde33()">GTAV W133</button>
-                        <button class="button-payload gtav-btn" onclick="load_Wilde38()">GTAV W138</button>
-                        <button class="button-payload gtav-btn" onclick="load_GTAL()">GTAV Lamance</button>
-                        <button class="button-payload rdr2-btn" onclick="load_Oysters100()">RDR2 V1.00</button>
-                        <button class="button-payload rdr2-btn" onclick="load_Oysters113()">RDR2 V1.13</button>
-                        <button class="button-payload rdr2-btn" onclick="load_Oysters119()">RDR2 V1.19</button>
-                        <button class="button-payload rdr2-btn" onclick="load_Oysters124()">RDR2 V1.24</button>
-                        <button class="button-payload rdr2-btn" onclick="load_Oysters129()">RDR2 V1.29</button>
-                    </div>
-                </div>
-            </div>
 
-            <button class="back-btn" onclick="closeModal()">Back to Main Menu</button>
-        </div>
-    </div>
 
-    <script>
-        // JavaScript for modal and tabs functionality
-        function openTab(tabId) {
-            document.getElementById('groupModal').style.display = 'block';
-            
-            // Hide all tab contents
-            var tabContents = document.getElementsByClassName('tab-content');
-            for (var i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove('active');
-            }
-            
-            // Remove active class from all buttons
-            var tabButtons = document.getElementsByClassName('tab-btn');
-            for (var i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove('active');
-            }
-            
-            // Show the selected tab and set button as active
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
 
-        function closeModal() {
-            document.getElementById('groupModal').style.display = 'none';
-        }
-
-        // Close modal if user clicks outside of it
-        window.onclick = function(event) {
-            var modal = document.getElementById('groupModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        // Initialize temperature selector
-        localStorage.setItem('fanthreshold', tempC.value);
-        for(var i=50; i<=80; i=i+5){
-            var select = document.getElementById("tempC");
-            var option = document.createElement("OPTION");
-            select.options.add(option);
-            option.text = i;
-            option.value = i;
-        }
-        tempC.value=60;
-    </script>
-
-    <!-- باقي السكريبتات الأصلية تبقى كما هي -->
-    <script src="int64.js"></script>
-    <script src="rop.js"></script>
-    <script src="kexploit.js" defer></script>
-    <script src="exploit.js" defer></script>
-    
-    <script>
-        // جميع الدوال الأصلية تبقى كما هي
-        // يتم الحفاظ على جميع functions الموجودة في الكود الأصلي
-        // بما في ذلك window.applicationCache و jbdone و load_pl وغيرها
-        // ...
-    </script>
+                <script>
+                                    // جميع الدوال الأصلية تبقى كما هي
+                                    // يتم الحفاظ على جميع functions الموجودة في الكود الأصلي
+                                    // بما في ذلك window.applicationCache و jbdone و load_pl وغيرها
+                                    // ...
+                </script>
 </body>
 </html>
+=======
+
+
+
+
+
