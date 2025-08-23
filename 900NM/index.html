@@ -1,16 +1,18 @@
 <html manifest="Cache.manifest">
 <head>
 <style>
-    html, body{
-margin:auto;
-font-family:sans-serif;
-font-size:20px;
-font-weight:lighter;
-text-align: center;
-color:#FFFFFF;
-background-size:cover;
-overflow: hidden;
+	
+   body {
+  background-image: url('images/Wallpaper-Blue-PS4-1920x1080.png'); /* خلفية بلايستيشن */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -957,12 +959,42 @@ function webexp()
 <br><br><br>
 </div>
 <br><br><br><br><br>
-<div class="content" >
- 	    <div class="text" >
- 	        <br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Designed, Compiled by :  </span >&nbsp;&nbsp; <span style="text-shadow: 4px 4px 4px black;" class="hue" >Karo Sharifi</span>
- 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Super Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Abc ,Znullptr ,hippie68 ... </a>
-	    </div>
+
+
+	  <div class="content">
+        <p><strong>Compiled by:</strong> <span style="color:#FFD700;">Karo Sharifi</span></p>
+        <p><strong>Updated & Developed by:</strong> <span style="color:#FFD700;">Khaled Elabani - Benghazi, Libya</span></p>
+		          <p><strong>Whatsapp : </strong> <span style="color:#FFD700;">+218-92-556-8088</span></p>
+
+        <p><strong>Super Special Thanks To : </strong> <span style="color:#FFD700;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Abc ,Znullptr ,hippie68 ...</span></p>
+
+        <hr style="border-color:#00BFFF;">
+    </div>
+
+    <div class="content" lang="ar" style="direction: rtl;">
+        <h3 style="color:#00FF99;">نصائح للمستخدمين الجدد</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ التحقق من تحذيث النظام هو 9.00</li>
+            <li>✅الدخول الى المتصفح www </li>
+            <li>✅ امسح ملفات الارتباط والسجل من الاعدادات المتصفح عن طريق الزر الخيار</li>
+        </ul>
+    </div>
+
+
+   <div style="text-align: center; margin-top: 40px;">
+  <p style="font-size: 22px; color: #FFD700; text-shadow: 0 0 5px #00BFFF;">
+    🎮 لعشاق ألعاب البلايستيشن وتهكير GoldHen – استمتع بتجربة احترافية ومخصصة
+  </p>
+  <a href="https://raad.com.ly/" target="_blank" style="display: inline-block; margin-top: 15px;">
+    <img src="images/logo.png" alt="Raad Host Logo" style="width: 120px; transition: transform 0.5s;">
+  </a>
 </div>
+<script>
+  // تأثير عند تمرير الماوس على الشعار
+  const logo = document.querySelector('a[href="https://raad.com.ly/"] img');
+  logo.addEventListener('mouseover', () => logo.style.transform = 'scale(1.2)');
+  logo.addEventListener('mouseout', () => logo.style.transform = 'scale(1)');
+</script>
 <script>
 localStorage.setItem('fanthreshold', tempC.value);
 for(var i=50; i<=80; i=i+5){
@@ -1207,6 +1239,8 @@ bzip2.decompress = function(bits, size, len) {
   return output;
 };
 </script>
+
+	
 </body>
 
 </html>
