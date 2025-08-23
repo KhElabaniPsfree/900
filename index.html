@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<title>Raad Host | PS4 Exploits</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<style>
+body {
+  background-image: url('images/Wallpaper-Blue-PS4-1920x1080.png'); /* خلفية بلايستيشن */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+  .ps-buttons { text-align: center; margin-top: 20px; } 
+  .btn { font-size: 40px; margin: 10px; animation: glow 2s infinite; }
+  @keyframes glow { 0% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } 100% { opacity: 0.6; transform: scale(1); } }
+#clock, #date {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+  color: #00ffff;
+}
+.title {
+  text-align: center;
+  font-size: 36px;
+  color: #00BFFF;
+  text-shadow: 0 0 10px #00BFFF;
+  margin-top: 10px;
+}
+.logo {
+  text-align: center;
+  margin-top: 10px;
+}
+.logo img {
+  width: 100px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+button {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #00BFFF;
+  border-radius: 12px;
+  color: #FFD700;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00BFFF;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #0F0F53;
+  color: white;
+  box-shadow: 0 0 20px #FFD700;
+}
+.content {
+  background: rgba(0,0,0,0.7);
+  margin: 30px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0 0 20px #00BFFF;
+}
+.status {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
+}
+</style>
+<script>
+function showdate() {
+  var dt = new Date();
+  var Hour = dt.getHours();
+  var Minute = dt.getMinutes();
+  var Day = dt.getDate();
+  var Month = dt.getMonth() + 1;
+  var Year = dt.getFullYear();
+  if (Minute < 10) Minute = "0" + Minute;
+  if (Hour < 10) Hour = "0" + Hour;
+  document.getElementById("date").innerHTML = Day + "/" + Month + "/" + Year;
+  document.getElementById("clock").innerHTML = Hour + ":" + Minute;
+}
+setInterval(showdate, 1000);
+</script>
+</head>
+<body>
+    <div id="date"></div>
+    <div id="clock"></div>
+
+
+    <!-- رموز أزرار بلايستيشن -->
+    <div class="ps-buttons">
+        <span class="btn">✖️</span>
+        <span class="btn">⭕</span>
+        <span class="btn">🔺</span>
+        <span class="btn">◼️</span>
+    </div>
+    <div class="logo">
+        <img src="images/pslogo2.png" alt="PlayStation Logo">
+    </div>
+
+
+    <h1 class="title">هذه الصفحة مخصصة لإصدار نظام بلايستشين 9.00 </h1>
+    <h1 class="title">تعديل بلايستشين 4 تحذيث 9.00 باستخدام الفلاش USB </h1>
+    <h1 class="title"> Hack Ps4 using USB (Flash) </h1>
+
+
+    <h2 class="status" id="msgs2">Status</h2>
+
+    <div style="text-align:center">
+        <a href="copych/index.html">
+            <button onmouseover="msgs2.innerHTML='Copy Cheat For All Versions'" onmouseout="msgs2.innerHTML='Status'">Copy Cheat</button>
+        </a>
+        <a href="binloader/index.html">
+            <button onmouseover="msgs2.innerHTML='Binloader For All Versions'" onmouseout="msgs2.innerHTML='Status'">Binloader</button>
+        </a>
+        <br>
+        <a href="900NM/index.html">
+            <button onmouseover="msgs2.innerHTML='Manual Exploit for 9.00'" onmouseout="msgs2.innerHTML='Status'">9.00NM</button>
+        </a>
+        <a href="900New/index.html">
+            <button onmouseover="msgs2.innerHTML='Auto Exploit for 9.00'" onmouseout="msgs2.innerHTML='Status'">9.00 New</button>
+        </a>
+        <a href="900G/index.html">
+            <button onmouseover="msgs2.innerHTML='Goldhen + PSFree for 9.00'" onmouseout="msgs2.innerHTML='Status'">Goldhen900</button>
+        </a>
+        <br>
+        <a href="http://karo218.ir/PS4TRAINER/index.html">
+            <button style="background-color:#0B0B61; color:white;" onmouseover="msgs2.innerHTML='PS4Trainer Offline'" onmouseout="msgs2.innerHTML='Status'">PS4Trainer Offline (27.01.2024)</button>
+        </a>
+    </div>
+
+    <div class="content">
+        <p><strong>Compiled by:</strong> <span style="color:#FFD700;">Karo Sharifi</span></p>
+        <p><strong>Updated & Developed by:</strong> <span style="color:#FFD700;">Khaled Elabani - Benghazi, Libya</span></p>
+        <p><strong>Whatsapp : </strong> <span style="color:#FFD700;">+218-92-556-8088</span></p>
+
+        <hr style="border-color:#00BFFF;">
+    </div>
+
+    <div class="content" lang="ar" style="direction: rtl;">
+        <h3 style="color:#00FF99;">نصائح للمستخدمين الجدد</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ التحقق من تحذيث النظام هو 9.00</li>
+            <li>✅الدخول الى المتصفح www </li>
+            <li>✅ امسح ملفات الارتباط والسجل من الاعدادات المتصفح عن طريق الزر الخيار</li>
+        </ul>
+    </div>
+<<<<<<<<< Temporary merge branch 1
+=========
+
+    <div>
+        <p>لعشاق العاب البلايستشين وتهكيرة الجولد هين</p>
+        <a href="https://raad.com.ly/">
+            <img src="images/logo.png" />
+
+        </a>
+
+    </div>
+</body>
+</html>
