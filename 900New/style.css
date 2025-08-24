@@ -17,11 +17,12 @@
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    min-height: 100vh;
-    padding: 20px;
-    position: relative;
+               background: url('../images/Wallpaper-Blue-PS4-1920x1080.png') no-repeat fixed center/cover;
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+
     overflow-x: hidden;
 }
 
